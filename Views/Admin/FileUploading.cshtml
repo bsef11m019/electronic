@@ -1,0 +1,53 @@
+﻿@model EAD_TERM_PROJECT_SECOND_EVALUATION.Models.Product
+<!DOCTYPE html>
+
+@{
+    Layout = "~/Views/Shared/Layout1.cshtml";
+ }
+   
+<div class="col-lg-5"></div>
+<div class="col-lg-6">
+  <table>
+    @using (Html.BeginForm("FileUploading", "Admin", FormMethod.Post, new {enctype="multipart/form-data" })){
+         <tr><td><h2 style="color:red">Upload Image: </h2></td><td></td></tr>
+    <tr><td><input type="file" style="color:red" name="Image" /></td><td> </td></tr>
+    <tr><td><h3 style="color:red">Name</h3></td><td>@Html.TextBoxFor(m => m.ProductName, new { placeholder = "Name" })</td></tr>
+    <tr><td> <h3 style="color:red">Type</h3></td><td>@Html.TextBoxFor(m => m.ProductType, new { placeholder = "Type" })</td></tr> 
+    <tr><td> <h3 style="color:red">Price</h3></td><td> @Html.TextBoxFor(m => m.ProductPrice, new { placeholder = "Price" })</td></tr>      
+    <tr><td></td><td> <br /><input type="submit" class="btn btn-danger col-lg-11 " value="FILE UPLOAD"/></td></tr>
+  }
+    <tr><td></td><td> <br /><button class="btn btn-danger col-lg-11 ">@Html.ActionLink("Delete", "/DeleteProduct")</button></td></tr>       
+      
+    </table>  
+</div>
+ 
+               
+               
+              
+                
+
+              
+               
+               
+               
+              
+               
+            
+               
+    
+
+
+
+    @*<div class="col-lg-5"></div>
+    <div class="col-lg-6">
+     <form action="/Admin/FileUploading" method="post" enctype="multipart/form-data" >
+     <h1 style="color:red"> UPLOAD Image: </h1><input type="file" name="image" style="color:red" /> <br />
+     <input type="submit"  value="upload" />
+</form>
+      </div>*@
+    
+   <div class="row"> 
+    </div>
+
+    
+

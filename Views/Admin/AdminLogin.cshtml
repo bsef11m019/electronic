@@ -1,0 +1,26 @@
+﻿@model EAD_TERM_PROJECT_SECOND_EVALUATION.Models.Admin
+
+<!DOCTYPE html>
+@{
+    Layout = "~/Views/Shared/Layout1.cshtml";
+ }
+    
+   
+
+
+<div class="col-lg-5"></div>
+<div class="col-lg-6">
+  <table>
+    @using (Html.BeginForm("AdminLogin","Admin",FormMethod.Post)) {
+    <tr><td><h5>@Html.Label("USERNAME : ", new { style = "color:white" })</h5></td><td>@Html.TextBoxFor(m => m.UserName, new {placeholder="",name="UserName" })</td></tr>
+    <tr><td><h5>@Html.Label("PASSWORD : ", new { style = "color:white" })</h5></td><td>@Html.TextBoxFor(m => m.Password, new {placeholder="",name="Password" })</td></tr>
+                    
+    <tr><td></td><td> <br /><input type="submit" class="btn btn-primary col-lg-11 " value="ADMIN LOGIN"/></td></tr>
+  }
+    <tr><td></td><td> <br /><h5 style="color:white">REGISTER YOURSELF </h5></td></tr>
+    <tr><td></td><td> <br /><button class="btn btn-danger col-lg-11 ">@Html.ActionLink("SIGN_UP", "SIGNUP")</button></td></tr>       
+
+    </table>  
+</div>
+   
+

@@ -1,0 +1,22 @@
+﻿
+@model EAD_TERM_PROJECT_SECOND_EVALUATION.Models.Product
+        
+     @foreach (var i in ViewBag.x)
+            {
+             <div class="col-lg-4"></div>    
+                 <img src="/image/@i.Image"/>
+                 
+                        <ul style="list-style-type:none; padding-left:6px">
+                          <div class="col-lg-4"></div> <li ><h3 style=" color:red">@i.ProductName</h3></li>
+                           <div class="col-lg-4"></div><li ><h3 style=" color:red">@i.ProductPrice</h3></li>
+                        </ul>
+                  
+                
+                //<li>@i.Pname</li>
+                //<li><img src="~/Images/@i.Image" /></li>
+               
+            }
+       
+
+
+        

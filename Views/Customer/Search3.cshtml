@@ -1,0 +1,20 @@
+﻿@model List<EAD_TERM_PROJECT_SECOND_EVALUATION.Models.Product>
+
+@{
+    ViewBag.Title = "search";
+    Layout = null;
+}
+
+<br />
+<br />
+    @foreach (var i in Model)
+    {
+                 <div class="col-lg-4"></div>    
+                 <img src="/image/@i.Image"/>
+                 
+                        <ul style="list-style-type:none; padding-left:6px">
+                          <div class="col-lg-4"></div> <li ><h3 style=" color:white">@i.ProductName</h3></li>
+                           <div class="col-lg-4"></div><li ><h3 style=" color:white">@i.ProductPrice</h3></li>
+                        </ul>
+    
+    }

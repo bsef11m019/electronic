@@ -1,0 +1,50 @@
+﻿@{
+   Layout = "~/Views/Shared/Layout3.cshtml";
+  
+}
+  
+@{
+    ViewBag.Title = "Search1";
+}
+
+<h2>Search1</h2>
+
+<script>
+      $(document).ready(function () {
+          $('#search').click(function () {
+              var value = $('search1').val();
+              alert("oye");
+              $("#table").empty();
+              $.getJSON('/Customer/Search?search=' + value, function (data) {
+                  var g = '';
+                  $.each(data, function (index, Product) {
+                      g = g + '<td ></td><div  style="color:red">' + Product.ProductName + '</div><td></td>' + '<td></td><img style="width: 70%;height: 200px; margin-top:20px;margin-bottom:10px;backgroung-size: 100% 100%" src="~/image/' + Product.Image + '"/></td></tr>'
+                      alert("oye tw");
+                  });
+                  alert("oye3");
+                  $(g).appendTo($("#table"));
+              });
+          });
+      });
+      
+        </script>
+
+<div class="top-nav-right">
+    <table id="table">
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+    <table>
+   <tr><td><input id="search1" type="text"></td></tr>
+	<tr><td><button id="search" >Search</button></td></tr>
+        </table>
+
+
+    
+</div>
+	<div class="clear"> </div>
+	<div class="clear"> </div>
+   

@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout2.cshtml";
+}
+        
+    @Scripts.Render("~/bundles/jquery")
+        <script>           
+
+            $(document).ready(function () {
+               
+                $('#search').click(function () {
+                    var value = $('#search1').val();
+                   
+                    $('#div1').unload();
+                    $('#div1').load("/Customer/Search3?search=" + value);
+                });
+            });
+        
+        </script>
+ 
+  <body>
+       <div id="div1"> </div>
+  </body>
+
+
+  

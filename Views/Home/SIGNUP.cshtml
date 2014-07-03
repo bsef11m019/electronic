@@ -1,0 +1,57 @@
+﻿@model EAD_TERM_PROJECT_SECOND_EVALUATION.Models.Customer
+<!DOCTYPE html>
+@{
+   Layout = "~/Views/Shared/Layout3.cshtml";
+  
+}
+   
+    <script src="~/js/jquery.validate-vsdoc.js"></script>  
+    <script src="~/js/jquery.validate.js"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/js/jquery.validate.unobtrusive.js"></script>
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+   
+<div class="col-lg-4"></div>
+<div class="col-lg-6" >
+    <form method="post" action="/Home/SIGNUP">
+    <table style="background-color:white ActiveBorder">
+    
+    @using (Html.BeginForm()) {
+     <tr><td>@Html.Label("USERNAME : ", new { style = "color:white" })</td><td>@Html.TextBoxFor(m => m.UserName, new {placeholder="",name="UserName",id="b2" })</td><td><input type="button" class="btn btn-primary col-lg-12 " value="Check" id="b1" /></td> 
+     <td><div id="result" style="color:red"></div></td><td><div  style="color:red">@Html.ValidationMessageFor(m=>m.UserName)</div></td></tr> 
+     <tr><td>@Html.Label("PASSWORD : ", new { style = "color:white" })</td><td>@Html.TextBoxFor(m => m.Password, new {placeholder="" })</td><td><div  style="color:red">@Html.ValidationMessageFor(m=>m.Password)</div></td></tr>
+     <tr><td>@Html.Label("NAME : ", new { style = "color:white" })</td><td>@Html.TextBoxFor(m => m.Name, new {placeholder="" })</td><td><div  style="color:red">@Html.ValidationMessageFor(m=>m.Name)</div></td></tr>
+     <tr><td>@Html.Label("CNIC : ", new { style = "color:white" })</td><td>@Html.TextBoxFor(m => m.Cnic, new {placeholder="" })</td></tr>
+     <tr><td>@Html.Label("COUNTRY : ", new { style = "color:white" })</td><td>@Html.TextBoxFor(m => m.Country, new {placeholder="" })</td></tr>
+     <tr><td>@Html.Label("CELL_NO : ", new { style = "color:white" })</td><td>@Html.TextBoxFor(m => m.CellNo, new {placeholder="" })</td></tr>
+  
+     <tr><td></td><td> <br /><input type="submit" class="btn btn-primary col-lg-12 " value="SIGN_UP"/></td></tr>
+             
+  }
+  </table> 
+  </form>
+  <script>
+     $(document).ready(function () {
+         $('#b1').click(function () {
+             var UserName = $('#b2').val();
+             alert(UserName);
+
+             $.getJSON("/Home/CheckUserName?UserName=" + UserName, function (data) {
+                         
+                 if (data)
+                 {
+                     $('#result').text("User already exists in database");
+                 }
+                 else
+                 {
+                     $('#result').text("User Name is available");       
+                 }
+             });
+
+         });
+     });
+  </script>    
+ 
+</div>
+
+  

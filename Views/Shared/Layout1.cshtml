@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<header id="header">
+   <div class="container">
+   <h1 class="navbar-brand navbar-brand_" style="margin-top:0px;"><h1 style="color:aliceblue;"> MODERN ELECTRIC CONCERN </h1></h1>
+   </div>   
+</header>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LOGIN</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="~/css/full-slider.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/bootstrap.css" >
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/camera.css">
+    <link rel="stylesheet" href="~/css/jquery.fancybox.css">
+
+    
+    <script src="~/js/bootstrap.js"></script>
+	<script src="~/js/jquery.js"></script>
+    <script src="~/js/jquery-migrate-1.2.1.js"></script>
+    <script src="~/js/superfish.js"></script>
+    <script src="~/js/jquery.mobilemenu.js"></script>
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <script src="~/js/jquery.ui.totop.js"></script>
+    <script src="~/js/jquery.touchSwipe.min.js"></script>
+    <script src="~/js/jquery.equalheights.js"></script>
+    
+         
+    <script src='~/js/camera.js'></script>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+        <script src="~/js/jquery.mobile.customized.min.js"></script>
+    <!--<![endif]-->
+    
+    <script>
+        $(window).load(function () {
+
+            jQuery('.camera_wrap').camera();
+
+        });
+    </script>
+     
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/jquery.validate.unobtrusive.js"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/js/jquery.validate.js"></script>
+    <script src="~/js/jquery.validate-vsdoc.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill">
+                 <img data-src="holder.js/1900 x1080" src="~/image/image27.jpg" alt="" />
+                 </div>
+                <div class="carousel-caption">
+                    <h1>FANS</h1>
+                </div>
+            </div>
+            <div class="item">
+               <div class="fill">
+                 <img data-src="holder.js/1900 x1080" src="~/image/image28.jpg" alt="" />
+                 </div>
+                <div class="carousel-caption">
+                    <h1>LIGHTS</h1>
+                </div>
+            </div>
+            <div class="item">
+               <div class="fill">
+                 <img data-src="holder.js/1900 x1080" src="~/image/image29.jpg" alt="" />
+                 </div>
+                 <div class="carousel-caption">
+                    <h1>ELECTRICAL APPLIANCES</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </div>
+
+    <div class="container">
+
+        <div class="row_1">
+        <div class="container">
+            <p class="title1">Welcome Message!</p>
+            <p class="title2">WELCOME TO THE MODERN ERA OF ELECTRIC APPLIANCES . YOU WILL DEFINITELY ENJOY THE VISIT BECAUSE THIS IS ONE OF THE LEADING SHOPPING WEBSITE NOW-A-DAYS . MODERN ELECTRIC CONCERN WILL GIVE YOU THE VARIETY OF PRODUCTS . 
+              <br />  HAVE A NICE DAY</p>
+            <!--<a  class="btn btn-default btn-lg-6 btn1">ENJOY THE JOURNEY </a>-->
+        </div>
+        </div>
+    </div>
+    <br />
+   <br />
+
+    @RenderBody()
+    <div class="row"> 
+    </div>
+
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="~/js/jquery-1.10.2.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+    </script>   
+<!--==============================footer=================================-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 footercol">
+                <ul class="social_icons clearfix">
+                     <li><a href="#"><img src="~/img/follow_icon1.png" alt=""></a></li>
+                     <li><a href="#"><img src="~/img/follow_icon2.png" alt=""></a></li>
+                     <li><a href="https://twitter.com/oswt"><img src="~/img/follow_icon3.png" alt=""></a></li>
+                     <li><a href="#"><img src="~/img/follow_icon4.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footerlogo footercol">
+                <a class="smalllogo2 logo" ><h1 style="color:white">MODERN ELECTRIC CONCERN</h1></a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footercol">
+                <p class="footerpriv">&copy; 2014 &bull; <a class="privacylink" href="index-5.html">Privacy policy</a><!-- {%FOOTER_LINK} -->
+                    <br> Website designed by <a href="http://store.templatemonster.com?aff=awdawd" rel="nofollow">TemplateMonster.com</a>
+                    <br>Selection of <a href="http://www.oswt.co.uk/" rel="nofollow">free web templates</a>.
+	            </p>
+       </div>
+     </div>
+   </div>
+</footer>
+</body>
+</html>

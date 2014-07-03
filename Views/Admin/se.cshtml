@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+ }
+
+@{
+    ViewBag.Title = "se";
+}
+
+<h2 style=" color:aqua">se</h2>
+<div class="row">
+            @foreach (var i in ViewBag.Catagory)
+            {
+
+                <div class="col-md-3" style="text-align:center;" id="v" >
+                  //  <div class="a" style="width: 70%; height: 200px; margin-top: 20px; margin-bottom: 10px; background-size: 100% 100%; background-image: url(/image/@i.Image); background-repeat: no-repeat; margin-left: auto; margin-right: auto;">
+                        
+                       
+                   // </div>
+                    <div>
+                        <ul style="list-style-type:none; padding-left:6px">
+                            <li style=" color:aqua">@i.Name</li>
+                            <li>@i.Country</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                //<li>@i.Pname</li>
+                //<li><img src="~/Images/@i.Image" /></li>
+                <img src="/image/@i.Image" />
+            }
+        </div>
